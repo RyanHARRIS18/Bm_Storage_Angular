@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Ryan\\Documents\\Projects\\Bm_Storage_Angular\\API\\API.csproj": {}
+    "C:\\Users\\Ryan\\Documents\\Projects\\Bm_Storage_Angular\\API\\API.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Ryan\\Documents\\Projects\\Bm_Storage_Angular\\API\\API.csproj": {
+    "C:\\Users\\Ryan\\Documents\\Projects\\Bm_Storage_Angular\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Ryan\\Documents\\Projects\\Bm_Storage_Angular\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\Ryan\\Documents\\Projects\\Bm_Storage_Angular\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "c:\\Users\\Ryan\\Documents\\Projects\\Bm_Storage_Angular\\API\\API.csproj",
+        "projectPath": "C:\\Users\\Ryan\\Documents\\Projects\\Bm_Storage_Angular\\API\\API.csproj",
         "packagesPath": "C:\\Users\\Ryan\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Ryan\\Documents\\Projects\\Bm_Storage_Angular\\API\\obj\\",
+        "outputPath": "C:\\Users\\Ryan\\Documents\\Projects\\Bm_Storage_Angular\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -44,6 +44,12 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0-rc.1.20451.13, )"
+            },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[5.0.0-rc.1.20451.13, )"
