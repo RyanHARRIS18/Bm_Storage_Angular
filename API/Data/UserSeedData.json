@@ -1,0 +1,193 @@
+[
+    {
+      "UserName": "Stuart",
+      "FirstName": "Vance",
+      "LastName": "Lancaster",
+      "DateOfBirth": "1997-06-30",
+      "KnownAs": "Stuart",
+      "Created": "2019-07-31",
+      "LastActive": "2020-06-14",
+      "GateCode": 419432,
+      "StreetAddress": "608 Hemlock Street",
+      "City": "Oasis",
+      "State": "New Hampshire",
+      "Zip": 20820,
+      "ContractFiles": [
+        {
+          "Url": "https://randomuser.me/api/portraits/men/33.jpg"
+        }
+      ]
+    },
+    {
+      "UserName": "Michael",
+      "FirstName": "Witt",
+      "LastName": "Bentley",
+      "DateOfBirth": "1965-07-25",
+      "KnownAs": "Michael",
+      "Created": "2020-04-20",
+      "LastActive": "2020-05-07",
+      "GateCode": 267704,
+      "StreetAddress": "828 Benson Avenue",
+      "City": "Richmond",
+      "State": "Maine",
+      "Zip": 83143,
+      "ContractFiles": [
+        {
+          "Url": "https://randomuser.me/api/portraits/men/42.jpg"
+        }
+      ]
+    },
+    {
+      "UserName": "Dixon",
+      "FirstName": "Alford",
+      "LastName": "Steele",
+      "DateOfBirth": "1959-11-04",
+      "KnownAs": "Dixon",
+      "Created": "2019-06-08",
+      "LastActive": "2020-05-02",
+      "GateCode": 928168,
+      "StreetAddress": "161 Carroll Street",
+      "City": "Thermal",
+      "State": "North Carolina",
+      "Zip": 10944,
+      "ContractFiles": [
+        {
+          "Url": "https://randomuser.me/api/portraits/men/94.jpg"
+        }
+      ]
+    },
+    {
+      "UserName": "Burris",
+      "FirstName": "Wise",
+      "LastName": "Fowler",
+      "DateOfBirth": "1976-12-14",
+      "KnownAs": "Burris",
+      "Created": "2020-01-12",
+      "LastActive": "2020-05-03",
+      "GateCode": 219084,
+      "StreetAddress": "162 Chester Street",
+      "City": "Templeton",
+      "State": "Marshall Islands",
+      "Zip": 34404,
+      "ContractFiles": [
+        {
+          "Url": "https://randomuser.me/api/portraits/men/65.jpg"
+        }
+      ]
+    },
+    {
+      "UserName": "Scott",
+      "FirstName": "Knox",
+      "LastName": "Stout",
+      "DateOfBirth": "1986-02-07",
+      "KnownAs": "Scott",
+      "Created": "2019-08-14",
+      "LastActive": "2020-06-19",
+      "GateCode": 660081,
+      "StreetAddress": "628 Cobek Court",
+      "City": "Eggertsville",
+      "State": "Alabama",
+      "Zip": 16618,
+      "ContractFiles": [
+        {
+          "Url": "https://randomuser.me/api/portraits/men/49.jpg"
+        }
+      ]
+    },
+        {
+          "UserName": "Cara",
+          "FirstName": "Cecilia",
+          "LastName": "Yang",
+          "DateOfBirth": "1962-08-16",
+          "KnownAs": "Cara",
+          "Created": "2020-04-09",
+          "LastActive": "2020-05-18",
+          "GateCode": 326216,
+          "StreetAddress": "560 Narrows Avenue",
+          "City": "Aberdeen",
+          "State": "North Carolina",
+          "Zip": 29935,
+          "ContractFiles": [
+            {
+              "Url": "https://randomuser.me/api/portraits/women/60.jpg"
+            }
+          ]
+        },
+        {
+          "UserName": "Tamika",
+          "FirstName": "Jannie",
+          "LastName": "Spencer",
+          "DateOfBirth": "1974-02-01",
+          "KnownAs": "Tamika",
+          "Created": "2019-10-15",
+          "LastActive": "2020-06-29",
+          "GateCode": 155204,
+          "StreetAddress": "514 Dictum Court",
+          "City": "Allensworth",
+          "State": "Indiana",
+          "Zip": 83503,
+          "ContractFiles": [
+            {
+              "Url": "https://randomuser.me/api/portraits/women/26.jpg"
+            }
+          ]
+        },
+        {
+          "UserName": "Rena",
+          "FirstName": "Cornelia",
+          "LastName": "Padilla",
+          "DateOfBirth": "1997-02-12",
+          "KnownAs": "Rena",
+          "Created": "2019-09-04",
+          "LastActive": "2020-05-26",
+          "GateCode": 694734,
+          "StreetAddress": "827 Onderdonk Avenue",
+          "City": "Echo",
+          "State": "South Dakota",
+          "Zip": 86461,
+          "ContractFiles": [
+            {
+              "Url": "https://randomuser.me/api/portraits/women/3.jpg"
+            }
+          ]
+        },
+        {
+          "UserName": "Beulah",
+          "FirstName": "Earnestine",
+          "LastName": "Clements",
+          "DateOfBirth": "1977-08-08",
+          "KnownAs": "Beulah",
+          "Created": "2019-12-31",
+          "LastActive": "2020-06-10",
+          "GateCode": 465506,
+          "StreetAddress": "861 Oceanic Avenue",
+          "City": "Richmond",
+          "State": "Northern Mariana Islands",
+          "Zip": 99567,
+          "ContractFiles": [
+            {
+              "Url": "https://randomuser.me/api/portraits/women/69.jpg"
+            }
+          ]
+        },
+        {
+          "UserName": "May",
+          "FirstName": "Marcia",
+          "LastName": "Wood",
+          "DateOfBirth": "1952-03-03",
+          "KnownAs": "May",
+          "Created": "2019-01-11",
+          "LastActive": "2020-05-03",
+          "GateCode": 298462,
+          "StreetAddress": "398 Noel Avenue",
+          "City": "Layhill",
+          "State": "Missouri",
+          "Zip": 39280,
+          "ContractFiles": [
+            {
+              "Url": "https://randomuser.me/api/portraits/women/65.jpg"
+            }
+          ]
+        }
+
+  ]
