@@ -1,1 +1,21 @@
-<p>tenant-list works!</p>
+
+    <h1>Site using Tenants</h1>
+    
+    <p>
+      <button class="btn btn-success pull-right" (click)="onNewTenant()">New Tenant</button>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                 <th>
+                   Name
+                </th>
+            </tr>
+        </thead>
+        <tbody >
+         <app-tenant-item
+        *ngFor="let tenantEl of tenants"
+        [tenant]="tenantEl"></app-tenant-item>
+        </tbody>
+    </table> 
+    

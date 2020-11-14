@@ -3,14 +3,16 @@ using System;
 using API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20201030150203_Units")]
+    partial class Units
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -108,9 +110,6 @@ namespace API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("UnitDescription")
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("UnitLocation")
                         .HasColumnType("TEXT");
 
@@ -124,7 +123,7 @@ namespace API.Migrations
 
                     b.HasIndex("UnitTypeID");
 
-                    b.ToTable("Units");
+                    b.ToTable("Unit");
                 });
 
             modelBuilder.Entity("API.Models.UnitType", b =>
@@ -141,9 +140,6 @@ namespace API.Migrations
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(6,2)");
-
-                    b.Property<string>("UnitTypeDescription")
-                        .HasColumnType("TEXT");
 
                     b.Property<string>("UnitTypeName")
                         .HasColumnType("TEXT");
