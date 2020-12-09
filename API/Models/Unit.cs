@@ -11,13 +11,11 @@ namespace API.Models
       [Display(Name = "Unit ID")]
       public int UnitID { get; set; }
       public int UnitNumber { get; set; }
-
       public int UnitTypeID { get; set; }
-
       public string UnitLocation { get; set; }
-
       public string UnitDescription {get; set;}
-
+      public bool Occupancy {get; set;}
+      public string UnitSpecificImageUrl {get; set;}
       public UnitType UnitType { get; set; }
       public ICollection<ContractFile> Contracts { get; set; }
 

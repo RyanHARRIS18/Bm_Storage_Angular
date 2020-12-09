@@ -108,6 +108,9 @@ namespace API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<bool>("Occupancy")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("UnitDescription")
                         .HasColumnType("TEXT");
 
@@ -116,6 +119,9 @@ namespace API.Migrations
 
                     b.Property<int>("UnitNumber")
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("UnitSpecificImageUrl")
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("UnitTypeID")
                         .HasColumnType("INTEGER");
@@ -143,6 +149,9 @@ namespace API.Migrations
                         .HasColumnType("decimal(6,2)");
 
                     b.Property<string>("UnitTypeDescription")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UnitTypeImageUrl")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("UnitTypeName")

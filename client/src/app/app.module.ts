@@ -22,6 +22,17 @@ import { ErrorInterceptor } from './_interceptors/error.interceptor';
 import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { ServerErrorComponent } from './errors/server-error/server-error.component';
 import { TenantItemComponent } from './tenants/tenant-item/tenant-item.component';
+import { UnitsComponent } from './units/units.component';
+import { UnitListComponent } from './units/unit-list/unit-list.component';
+import { UnitItemComponent } from './units/unit-item/unit-item.component';
+import { UnitDetailComponent } from './units/unit-detail/unit-detail.component';
+import { JwtInterceptor } from './_interceptors/jwt.interceptor';
+import { OpenUnitsComponent } from './open-units/open-units.component';
+import { MyUnitsComponent } from './my-units/my-units.component';
+import { OpenUnitsListComponent } from './open-units/open-units-list/open-units-list.component';
+import { OpenUnitsItemComponent } from './open-units/open-units-item/open-units-item.component';
+import { OpenUnitsDetailComponent } from './open-units/open-units-detail/open-units-detail.component';
+import { UnitEditComponent } from './units/unit-edit/unit-edit.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +48,17 @@ import { TenantItemComponent } from './tenants/tenant-item/tenant-item.component
     TestErrorsComponent,
     NotFoundComponent,
     ServerErrorComponent,
-    TenantItemComponent
+    TenantItemComponent,
+    UnitsComponent,
+    UnitListComponent,
+    UnitItemComponent,
+    UnitDetailComponent,
+    OpenUnitsComponent,
+    MyUnitsComponent,
+    OpenUnitsListComponent,
+    OpenUnitsItemComponent,
+    OpenUnitsDetailComponent,
+    UnitEditComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +70,8 @@ import { TenantItemComponent } from './tenants/tenant-item/tenant-item.component
     SharedModule
   ],
   providers: [
-    {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true}
+    {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
+    {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
   ],
   bootstrap: [AppComponent]
 })

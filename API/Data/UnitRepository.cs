@@ -31,29 +31,6 @@ namespace API.Data
             return await _context.SaveChangesAsync() > 0;
         }
 
-        public async Task<IEnumerable<Unit>> GetUnitsAsync()
-        {
-            return await _context.Units
-            .Include(p => p.UnitType)
-            .ToListAsync();
-        }
-
-        public async Task<Unit> GetUnitByIdAsync(int id)
-        {
-            return await _context.Units.FindAsync(id);
-        }
-
-        public async Task<IEnumerable<Unit>> GetUnitsByUnitTypeOrNumberAsync(string unitTypeName, int unitNumber)
-        {
-             return await _context.Units.Where(x => x.UnitNumber == unitNumber || x.UnitType.UnitTypeName == unitTypeName)
-                                      .Include(p => p.UnitType)
-                                      .ToListAsync();
-
-           
-        }
-
-     
-
          public async Task<StorageUnitDTO> GetStorgeUnitAsync(int unitNumber , string unitTypeName)
          {
              return await _context.Units

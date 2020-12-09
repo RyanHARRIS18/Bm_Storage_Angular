@@ -10,11 +10,7 @@ namespace API.Interfaces
     {
         void Update(Unit unit);
         Task<bool> SaveAllAsync();
-        Task<IEnumerable<Unit>> GetUnitsAsync();
-        Task<Unit> GetUnitByIdAsync(int id);
-        Task<IEnumerable<Unit>>  GetUnitsByUnitTypeOrNumberAsync(string unitTypeName, int unitNumber);
-        Task<StorageUnitDTO> GetStorgeUnitAsync([Optional] int unitNumber , [Optional] string unitTypeName);
         Task<IEnumerable<StorageUnitDTO>> GetStorageUnitsAsync();
-
+        Task<StorageUnitDTO> GetStorgeUnitAsync([Optional] int unitNumber , [Optional] string unitTypeName);
     }
 }

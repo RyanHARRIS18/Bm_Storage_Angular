@@ -30,6 +30,9 @@ namespace API.Models
 
       public string UnitTypeDescription {get; set;}
 
+      public string UnitTypeImageUrl {get; set;}
+
+
 
    }
 }

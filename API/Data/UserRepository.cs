@@ -35,25 +35,6 @@ namespace API.Data
            .ToListAsync();
         }
 
-        public async Task<AppUser> GetUserByIdAsync(int id)
-        {
-            return await _context.Users.FindAsync(id);
-        }
-
-        public async Task<AppUser> GetUserByUsernameAsync(string username)
-        {
-            return await _context.Users
-            .Include(p => p.ContractFiles)
-            .SingleOrDefaultAsync(x => x.UserName == username);
-        }
-
-        public async Task<IEnumerable<AppUser>> GetUsersAsync()
-        {
-            return await _context.Users
-            .Include(p => p.ContractFiles)
-            .ToListAsync();
-        }
-
         public async Task<bool> SaveAllAsync()
         {
             return await _context.SaveChangesAsync() > 0;

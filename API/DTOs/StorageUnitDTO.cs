@@ -18,6 +18,9 @@ namespace API.Models
 
       public string UnitTypeName { get; set; }
 
+      public string UnitDescription {get; set;}
+
+
       // Feet Wide
       public decimal Width { get; set; }
 

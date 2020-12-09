@@ -1,0 +1,20 @@
+
+
+<tr [routerLink]="tenant.id" routerLinkActive="active">
+    <td>
+      {{tenant.firstName}} {{tenant.lastName}}
+    </td>
+    <td>
+      {{tenant.streetAddress}}
+    </td>
+    <td>
+      {{tenant.created}}
+    </td>
+    <td>
+        <a asp-action="Edit" asp-route-id="@item.UnitID">Edit</a> 
+        <br>
+        <a asp-action="Details" asp-route-id="@item.UnitID">Details</a> 
+        <br>
+        <a asp-action="Delete" asp-route-id="@item.UnitID">Delete</a>
+    </td>
+</tr> 
