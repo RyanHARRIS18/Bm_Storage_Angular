@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20201030150203_Units")]
-    partial class Units
+    [Migration("20201209220937_initialCreate")]
+    partial class initialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -110,11 +110,20 @@ namespace API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<bool>("Occupancy")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("UnitDescription")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("UnitLocation")
                         .HasColumnType("TEXT");
 
                     b.Property<int>("UnitNumber")
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("UnitSpecificImageUrl")
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("UnitTypeID")
                         .HasColumnType("INTEGER");
@@ -123,7 +132,7 @@ namespace API.Migrations
 
                     b.HasIndex("UnitTypeID");
 
-                    b.ToTable("Unit");
+                    b.ToTable("Units");
                 });
 
             modelBuilder.Entity("API.Models.UnitType", b =>
@@ -140,6 +149,12 @@ namespace API.Migrations
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(6,2)");
+
+                    b.Property<string>("UnitTypeDescription")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UnitTypeImageUrl")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("UnitTypeName")
                         .HasColumnType("TEXT");

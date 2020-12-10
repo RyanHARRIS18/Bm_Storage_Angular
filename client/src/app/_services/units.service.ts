@@ -8,7 +8,7 @@ import { CreateUnitDTO } from '../_models/createUnitDTO';
 
 const httpOptions = {
   headers: new HttpHeaders({
-    Authorization: 'Bearer ' + JSON.parse(localStorage.getItem('user')).token
+    Authorization: 'Bearer ' + JSON.parse(localStorage.getItem('user'))?.token
   })
 }
 
@@ -20,7 +20,7 @@ export class UnitsService {
   unitListChangedEvent = new Subject<Unit[]>(); 
   unitTypeListChangedEvent = new Subject<UnitType[]>(); 
   unitSelectedEvent = new Subject<Unit>(); 
-  units: Unit[] = [];
+  units: any[] = [];
   unitTypes;
 
   baseUrl = environment.apiUrl;
@@ -68,15 +68,20 @@ export class UnitsService {
     addUnit(unit: CreateUnitDTO){
       if (!unit) {
         return;
-      }
+      } 
+      
       // const strUnit = JSON.stringify(unit);
       const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
       console.log(unit);
-      this.http.post<{ message: string, unit: Unit }>
+      this.http.post<{ returnUnit: Unit }>
       (this.baseUrl + 'unit/new', unit,{ headers: headers }).subscribe(
-          (responseData) => {
-            this.units.push(responseData.unit);
+          (returnUnit) => {
+            console.log(returnUnit);
+
+            this.units.push(returnUnit);
+            this.unitListChangedEvent.next([...this.units]);
             this.sortAndSend();
+            console.log(this.units);
           }
         );
         this.getUnits();
@@ -117,9 +122,9 @@ console.log(newUnit);
     newUnit.UnitNumber = (newUnit.UnitNumber).toString();
 
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    this.http.put<{ message: string, unit: Unit }>(this.baseUrl + 'unit/edit', newUnit,{ headers: headers }).subscribe(
-      (responseData) => {
-      this.units[pos] = responseData.unit;
+    this.http.put<{ returnUnit }>(this.baseUrl + 'unit/edit', newUnit,{ headers: headers }).subscribe(
+      (returnUnit) => {
+      this.units[pos] = returnUnit;
       console.log(this.units);
       this.unitListChangedEvent.next(this.units.slice());
       });

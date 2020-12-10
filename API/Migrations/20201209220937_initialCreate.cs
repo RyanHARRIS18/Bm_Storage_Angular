@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace API.Migrations
 {
-    public partial class Units : Migration
+    public partial class initialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -17,7 +17,9 @@ namespace API.Migrations
                     Width = table.Column<decimal>(type: "decimal(6,2)", nullable: false),
                     Depth = table.Column<decimal>(type: "decimal(6,2)", nullable: false),
                     Height = table.Column<decimal>(type: "decimal(6,2)", nullable: false),
-                    Price = table.Column<decimal>(type: "decimal(6,2)", nullable: false)
+                    Price = table.Column<decimal>(type: "decimal(6,2)", nullable: false),
+                    UnitTypeDescription = table.Column<string>(type: "TEXT", nullable: true),
+                    UnitTypeImageUrl = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -51,20 +53,23 @@ namespace API.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Unit",
+                name: "Units",
                 columns: table => new
                 {
                     UnitID = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     UnitNumber = table.Column<int>(type: "INTEGER", nullable: false),
                     UnitTypeID = table.Column<int>(type: "INTEGER", nullable: false),
-                    UnitLocation = table.Column<string>(type: "TEXT", nullable: true)
+                    UnitLocation = table.Column<string>(type: "TEXT", nullable: true),
+                    UnitDescription = table.Column<string>(type: "TEXT", nullable: true),
+                    Occupancy = table.Column<bool>(type: "INTEGER", nullable: false),
+                    UnitSpecificImageUrl = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Unit", x => x.UnitID);
+                    table.PrimaryKey("PK_Units", x => x.UnitID);
                     table.ForeignKey(
-                        name: "FK_Unit_UnitType_UnitTypeID",
+                        name: "FK_Units_UnitType_UnitTypeID",
                         column: x => x.UnitTypeID,
                         principalTable: "UnitType",
                         principalColumn: "UnitTypeID",
@@ -88,9 +93,9 @@ namespace API.Migrations
                 {
                     table.PrimaryKey("PK_ContractFiles", x => x.ContractFileId);
                     table.ForeignKey(
-                        name: "FK_ContractFiles_Unit_UnitID",
+                        name: "FK_ContractFiles_Units_UnitID",
                         column: x => x.UnitID,
-                        principalTable: "Unit",
+                        principalTable: "Units",
                         principalColumn: "UnitID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
@@ -112,8 +117,8 @@ namespace API.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Unit_UnitTypeID",
-                table: "Unit",
+                name: "IX_Units_UnitTypeID",
+                table: "Units",
                 column: "UnitTypeID");
         }
 
@@ -123,7 +128,7 @@ namespace API.Migrations
                 name: "ContractFiles");
 
             migrationBuilder.DropTable(
-                name: "Unit");
+                name: "Units");
 
             migrationBuilder.DropTable(
                 name: "Users");

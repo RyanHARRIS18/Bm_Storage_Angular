@@ -17,6 +17,8 @@
               name="unitNumber" 
               required>
           </div>
+          <div *ngIf="!unitNumber.valid && unitNumber.dirty" class="alert alert-danger">Enter a unit number</div>
+
           <!-- Unit Description input Field -->
           <div class="col-sm-12 form-group">
             <label for="unitDescription">Unit Description</label>
@@ -32,7 +34,7 @@
               name="unitDescription" 
               required>
   
-            <div *ngIf="!unitNumber.valid && unitNumber.dirty" class="alert alert-danger">Enter a unit number</div>
+            <div *ngIf="!unitDescription.valid && unitDescription.dirty" class="alert alert-danger">Enter a unit Description</div>
           </div>
           <!-- Unit Location Field -->
           <div class="col-sm-12 form-group">
@@ -62,7 +64,7 @@
             </label>
           </div>
 
-        <div class="alert alert-danger" *ngIf="!form.valid && form.touched">The name and email are required</div>
+        <div class="alert alert-danger" *ngIf="!form.valid && form.touched">All fields are required</div>
   
         <div class="row">
           <div class="col-xs-12">

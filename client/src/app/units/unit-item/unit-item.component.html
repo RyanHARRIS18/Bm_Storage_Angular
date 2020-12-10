@@ -1,4 +1,4 @@
-<tr [routerLink]="unit.unitNumber" routerLinkActive="active">
+<tr [routerLink]="unit.unitNumber" routerLinkActive="active" class="md-col-12">
         <td>
           {{unit.unitNumber}} 
         </td>
@@ -11,11 +11,5 @@
         <td>
           {{unit.unitLocation}}
         </td>
-        <td>
-            <a asp-action="Edit" asp-route-id="@item.UnitID">Edit</a> 
-            <br>
-            <a asp-action="Details" asp-route-id="@item.UnitID">Details</a> 
-            <br>
-            <a asp-action="Delete" asp-route-id="@item.UnitID">Delete</a>
-        </td>
+     
 </tr>
