@@ -1,0 +1,30 @@
+<div class="card" *ngIf="unit">
+    <div class="col-12">
+        <img src="{{unit.unitType.unitTypeImageUrl || './assests/unit.png' }}" alt="{{unit.unitType.unitTypeName}}" 
+        class="card-image-top img-thumbnail">
+    </div>
+    <div class="card-body">
+        <div>
+            <strong>Location: </strong>
+            <p>{{unit.unitNumber}}</p>
+        </div>
+        <div>
+            <strong>Location: </strong>
+            <p>{{unit.unitType.unitTypeName}}</p>
+        </div>
+        <div>
+            <strong>Location: </strong>
+            <p>{{unit.unitLocation}}</p>
+        </div>
+        <div>
+            <strong>Description: </strong>
+            <p>{{unit.unitDescription}}</p>
+        </div> 
+    </div>
+    <div class="card-footer">
+        <div class="btn-group d-flex">
+            <button class="btn btn-primary">Rent</button>
+            <button class="btn btn-secondary">Waiting List</button>
+        </div>
+    </div>
+</div>

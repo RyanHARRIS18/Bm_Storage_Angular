@@ -1,0 +1,31 @@
+<div [routerLink]="unit.unitNumber" routerLinkActive="active">
+    <div class="card mb-4">
+      <div class="card-img-wrapper">
+        <img src="{{unit.unitType.unitTypeImageUrl}}" alt="{{unit.unitType.unitTypeName}}" class="card-img-top">
+        <ul class="list-inline member-icons animate text-center">
+          <li class="list-inline-item">
+            <button class="btn btn-primary">
+              <i class="fa fa-plus"></i>
+          </button></li>
+          <li class="list-inline-item">
+            <button class="btn btn-primary">
+              <i class="fa fa-envelope"></i>
+          </button></li>
+        </ul>
+      </div>
+      <div class="card-body p-1">
+        <h6 class="card-title text-center mb-1"><i class="fa fa-user mr-2"></i>
+          {{unit.unitType.unitTypeName}}
+        </h6>
+        <p class="card-text text-muted text-centered">{{unit.unitDescription}}</p>
+        <p class="card-text text-muted text-centered">{{unit.unitNumber}}</p>
+      </div>
+  
+      <div>
+          <a asp-action="Edit" asp-route-id="@item.UnitID">Edit</a> 
+          <br>
+          <a asp-action="Details" asp-route-id="@item.UnitID">Details</a> 
+          <br>
+          <a asp-action="Delete" asp-route-id="@item.UnitID">Delete</a>
+      </div>
+    </div> 

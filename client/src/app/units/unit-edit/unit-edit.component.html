@@ -1,0 +1,78 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+      <form id="unit-edit" #form="ngForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+
+          <!-- Unit New Number input Field -->
+          <div class="col-sm-12 form-group">
+            <label for="unitNumber">Unit Number</label>
+            <input 
+              type="text" 
+              id="unitNumber" 
+              class="form-control required" 
+              size="120" 
+              max="120" 
+              [ngModel]="unit?.unitNumber"
+              #unitNumber="ngModel" 
+              name="unitNumber" 
+              required>
+          </div>
+          <div *ngIf="!unitNumber.valid && unitNumber.dirty" class="alert alert-danger">Enter a unit number</div>
+
+          <!-- Unit Description input Field -->
+          <div class="col-sm-12 form-group">
+            <label for="unitDescription">Unit Description</label>
+            <input 
+              type="text" 
+              id="unitDescription" 
+              class="form-control required" 
+              size="120" 
+              max="255" 
+              [ngModel]="unit?.unitDescription"
+              unitDescription 
+              #unitDescription="ngModel" 
+              name="unitDescription" 
+              required>
+  
+            <div *ngIf="!unitDescription.valid && unitDescription.dirty" class="alert alert-danger">Enter a unit Description</div>
+          </div>
+          <!-- Unit Location Field -->
+          <div class="col-sm-12 form-group">
+            <label for="unitLocation">Unit Location</label>
+            <input 
+              type="text" 
+              id="unitLocation" 
+              class="form-control invalid" 
+              size="150" 
+              max="255" 
+              [ngModel]="unit?.unitLocation"
+              #unitLocation="ngModel" 
+              required name="unitLocation">
+  
+            <div *ngIf="!unitLocation.valid && unitLocation.dirty" class="alert alert-danger">Enter a unit location</div>
+          </div>
+
+          <div class="radio" *ngFor="let types of unitTypes" class="form-control">
+            <label>
+              <input
+                type="radio"
+                name="unitTypeName"
+                [ngModel]="unit?.unitType.unitTypeName"
+                [value]="types.unitTypeName"
+                required>
+              {{ types.unitTypeName }}
+            </label>
+          </div>
+
+        <div class="alert alert-danger" *ngIf="!form.valid && form.touched">All fields are required</div>
+  
+        <div class="row">
+          <div class="col-xs-12">
+            <button class="btn btn-success" type="submit" [disabled]="!form.valid">Save</button>
+            <button class="btn btn-primary" type="button" (click)="onCancel()">Cancel</button>
+          </div>
+        </div>
+          </div>
+      </form>
+    </div>
+  </div>

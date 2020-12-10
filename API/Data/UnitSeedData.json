@@ -1,0 +1,56 @@
+[{
+    "UnitID": "100",
+    "UnitTypeID": "1",
+    "UnitLocation": "A1"
+},
+{
+    "UnitID": "101",
+    "UnitTypeID": "1",
+    "UnitLocation": "A2"
+},
+{
+    "UnitID": "102",
+    "UnitTypeID": "1",
+    "UnitLocation": "A3"
+},
+{
+    "UnitID": "103",
+    "UnitTypeID": "1",
+    "UnitLocation": "A4"
+},
+{
+    "UnitID": "104",
+    "UnitTypeID": "1",
+    "UnitLocation": "A5"
+},
+{
+    "UnitID": "105",
+    "UnitTypeID": "1",
+    "UnitLocation": "A6"
+},
+{
+    "UnitID": "106",
+    "UnitTypeID": "1",
+    "UnitLocation": "A7"
+},
+{
+    "UnitID": "107",
+    "UnitTypeID": "1",
+    "UnitLocation": "A8"
+},
+{
+    "UnitID": "108",
+    "UnitTypeID": "1",
+    "UnitLocation": "A9"
+},
+{
+    "UnitID": "109",
+    "UnitTypeID": "1",
+    "UnitLocation": "A10"
+},
+{
+    "UnitID": "110",
+    "UnitTypeID": "1",
+    "UnitLocation": "A11"
+}
+]

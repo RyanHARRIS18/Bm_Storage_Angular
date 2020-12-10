@@ -10,5 +10,7 @@ namespace API.Data
         }
 
         public DbSet<AppUser> Users {get; set;}
+        public DbSet<Unit> Units {get; set;}
+        public DbSet<UnitType> UnitType {get; set;}
     }
 }
